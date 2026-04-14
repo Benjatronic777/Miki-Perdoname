@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Miki... perdóname 💔</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial;
+      margin-top: 100px;
+      background: linear-gradient(to right, #ffdde1, #ee9ca7);
+    }
+    h1 {
+      font-size: 40px;
+      color: #333;
+    }
+    p {
+      font-size: 20px;
+      color: #555;
+    }
+    button {
+      font-size: 20px;
+      padding: 12px 25px;
+      margin: 10px;
+      cursor: pointer;
+      border: none;
+      border-radius: 12px;
+    }
+    #si {
+      background-color: #4CAF50;
+      color: white;
+    }
+    #no {
+      background-color: #ff4d4d;
+      color: white;
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Oiga gfa me perdonas?</h1>
+<p id="mensaje">Te juro que no volvera a pasar te lo ruego</p>
+
+<button id="si" onclick="aceptar()">Sí</button>
+<button id="no" onclick="escapar()" onmouseover="escapar()">No</button>
+
+<script>
+function aceptar() {
+  document.body.innerHTML = "<h1>Gracias Miki nunca volverá a pasar te lo juro</h1>";
+}
+
+function escapar() {
+  let frases = [
+    "No esta vez ",
+    "POR QUE SIGUES DICIENDO QUE NO",
+    "Aqui ya no puedes rechazarlo",
+    "Dale, ahi esta la opcion "si"",
+    "No seas así 😢"
+  ];
+
+  // Cambiar frase
+  let random = Math.floor(Math.random() * frases.length);
+  document.getElementById("mensaje").innerText = frases[random];
+
+  // Mover botón
+  let x = Math.random() * (window.innerWidth - 100);
+  let y = Math.random() * (window.innerHeight - 50);
+
+  let boton = document.getElementById("no");
+  boton.style.left = x + "px";
+  boton.style.top = y + "px";
+}
+</script>
+
+</body>
+</html>
