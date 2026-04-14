@@ -47,23 +47,21 @@
 
 <script>
 function aceptar() {
-  document.body.innerHTML = "<h1>Gracias Miki nunca volverá a pasar te lo juro</h1>";
+  document.body.innerHTML = "<h1>Gracias Miki, nunca volverá a pasar te lo juro</h1>";
 }
 
 function escapar() {
   let frases = [
-    "No esta vez ",
-    "POR QUE SIGUES DICIENDO QUE NO",
-    "Aqui ya no puedes rechazarlo",
-    "Dale, ahi esta la opcion "si"",
+    "DEJA DE DECIR QUE NO",
+    "Try de nuevo boss",
+    "Papa Dio diria que si",
+    "SEGURO KARIRA TE DIJO QUE DIGAS QUE NO",
     "No seas así 😢"
   ];
 
-  // Cambiar frase
   let random = Math.floor(Math.random() * frases.length);
   document.getElementById("mensaje").innerText = frases[random];
 
-  // Mover botón
   let x = Math.random() * (window.innerWidth - 100);
   let y = Math.random() * (window.innerHeight - 50);
 
@@ -72,6 +70,3 @@ function escapar() {
   boton.style.top = y + "px";
 }
 </script>
-
-</body>
-</html>
